@@ -1,1 +1,1 @@
-this game is actually for the game jam about ducks and bombs its a godot game feel free to download
+we will make sprites music and code sprites: ducks and store and background ground all that music: we will see soon code: self explanatory this game is made for a game jam about ducks and bombs in godot feel free to downlaod
