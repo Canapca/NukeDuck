@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7ah4bl0qrsmq"]
+
+[ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="1_3aqj0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 760.0
+offset_right = 1932.0
+offset_bottom = 841.0
+theme = ExtResource("1_3aqj0")
+text = "settings go here"
+horizontal_alignment = 1
