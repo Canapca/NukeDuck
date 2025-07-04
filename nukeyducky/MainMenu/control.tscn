@@ -1,11 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://digijotgdcas5"]
 
 [ext_resource type="Script" uid="uid://bj1i57x7jnxbg" path="res://MainMenu/start.gd" id="1_ee4bf"]
+[ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="1_k3u3f"]
 [ext_resource type="Script" uid="uid://2u6o8sta74bc" path="res://MainMenu/option.gd" id="2_kbped"]
 [ext_resource type="Script" uid="uid://smlxjyypx2xr" path="res://MainMenu/credits.gd" id="3_fj5cn"]
 [ext_resource type="Script" uid="uid://c43xrnxd42mvc" path="res://MainMenu/exit.gd" id="4_iy58a"]
-
-[sub_resource type="Theme" id="Theme_6a6wx"]
 
 [sub_resource type="FontFile" id="FontFile_sky72"]
 cache/0/64/0/ascent = 0.0
@@ -27,6 +26,8 @@ cache/0/256/0/scale = 1.0
 [sub_resource type="LabelSettings" id="LabelSettings_0ytqx"]
 font = SubResource("FontFile_sky72")
 font_size = 256
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yapkh"]
 
@@ -90,7 +91,7 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 175.0
-theme = SubResource("Theme_6a6wx")
+theme = ExtResource("1_k3u3f")
 text = "allah duck"
 label_settings = SubResource("LabelSettings_0ytqx")
 horizontal_alignment = 1
@@ -102,7 +103,7 @@ offset_top = 400.0
 offset_right = 1135.0
 offset_bottom = 491.0
 focus_mode = 0
-theme = SubResource("Theme_eh0v1")
+theme = ExtResource("1_k3u3f")
 text = "start game"
 flat = true
 script = ExtResource("1_ee4bf")
