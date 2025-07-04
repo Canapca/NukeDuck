@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://digijotgdcas5"]
+
+[ext_resource type="Script" uid="uid://bj1i57x7jnxbg" path="res://MainMenu/start.gd" id="1_ee4bf"]
+[ext_resource type="Script" uid="uid://2u6o8sta74bc" path="res://MainMenu/option.gd" id="2_kbped"]
+[ext_resource type="Script" uid="uid://smlxjyypx2xr" path="res://MainMenu/credits.gd" id="3_fj5cn"]
+[ext_resource type="Script" uid="uid://c43xrnxd42mvc" path="res://MainMenu/exit.gd" id="4_iy58a"]
+
+[sub_resource type="Theme" id="Theme_6a6wx"]
+
+[sub_resource type="FontFile" id="FontFile_sky72"]
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/256/0/ascent = 0.0
+cache/0/256/0/descent = 0.0
+cache/0/256/0/underline_position = 0.0
+cache/0/256/0/underline_thickness = 0.0
+cache/0/256/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ytqx"]
+font = SubResource("FontFile_sky72")
+font_size = 256
+
+[sub_resource type="FontFile" id="FontFile_pxugv"]
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_eh0v1"]
+default_font = SubResource("FontFile_pxugv")
+default_font_size = 60
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 175.0
+theme = SubResource("Theme_6a6wx")
+text = "allah duck"
+label_settings = SubResource("LabelSettings_0ytqx")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 400.0
+offset_right = 1135.0
+offset_bottom = 491.0
+theme = SubResource("Theme_eh0v1")
+text = "start game"
+script = ExtResource("1_ee4bf")
+
+[node name="Button" type="Button" parent="Button"]
+offset_top = 144.0
+offset_right = 350.0
+offset_bottom = 235.0
+theme = SubResource("Theme_eh0v1")
+text = "settings"
+script = ExtResource("2_kbped")
+
+[node name="Button" type="Button" parent="Button/Button"]
+offset_top = 144.0
+offset_right = 350.0
+offset_bottom = 235.0
+theme = SubResource("Theme_eh0v1")
+text = "credits"
+script = ExtResource("3_fj5cn")
+
+[node name="Button" type="Button" parent="Button/Button/Button"]
+offset_top = 144.0
+offset_right = 350.0
+offset_bottom = 235.0
+theme = SubResource("Theme_eh0v1")
+text = "quit"
+script = ExtResource("4_iy58a")
