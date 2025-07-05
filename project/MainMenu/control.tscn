@@ -1,0 +1,142 @@
+[gd_scene load_steps=15 format=3 uid="uid://byuj2ymynuktm"]
+
+[ext_resource type="Script" uid="uid://bj1i57x7jnxbg" path="res://MainMenu/start.gd" id="1_ee4bf"]
+[ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="1_k3u3f"]
+[ext_resource type="Script" uid="uid://2u6o8sta74bc" path="res://MainMenu/option.gd" id="2_kbped"]
+[ext_resource type="Script" uid="uid://smlxjyypx2xr" path="res://MainMenu/credits.gd" id="3_fj5cn"]
+[ext_resource type="Script" uid="uid://c43xrnxd42mvc" path="res://MainMenu/exit.gd" id="4_iy58a"]
+
+[sub_resource type="FontFile" id="FontFile_sky72"]
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/256/0/ascent = 0.0
+cache/0/256/0/descent = 0.0
+cache/0/256/0/underline_position = 0.0
+cache/0/256/0/underline_thickness = 0.0
+cache/0/256/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ytqx"]
+font = SubResource("FontFile_sky72")
+font_size = 256
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yapkh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yapkh"]
+bg_color = Color(0, 0, 0, 0.4)
+border_color = Color(0, 0, 0, 0.364706)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3u3f"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvb6l"]
+bg_color = Color(0, 0, 0, 0.662745)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdy12"]
+bg_color = Color(1, 0, 1, 1)
+
+[sub_resource type="FontFile" id="FontFile_pxugv"]
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_eh0v1"]
+default_font = SubResource("FontFile_pxugv")
+default_font_size = 60
+Button/colors/font_color = Color(0.629676, 0.629674, 0.629675, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.775063, 0.775063, 0.775063, 1)
+Button/constants/outline_size = 10
+Button/styles/focus = SubResource("StyleBoxEmpty_yapkh")
+Button/styles/hover = SubResource("StyleBoxFlat_yapkh")
+Button/styles/normal = SubResource("StyleBoxFlat_k3u3f")
+Button/styles/pressed = SubResource("StyleBoxFlat_uvb6l")
+FlatButton/styles/hover = SubResource("StyleBoxFlat_tdy12")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 175.0
+theme = ExtResource("1_k3u3f")
+text = "allah duck"
+label_settings = SubResource("LabelSettings_0ytqx")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 400.0
+offset_right = 1110.0
+offset_bottom = 466.0
+focus_mode = 0
+theme = ExtResource("1_k3u3f")
+text = "start game"
+flat = true
+script = ExtResource("1_ee4bf")
+
+[node name="Button" type="Button" parent="Button"]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 300.0
+offset_bottom = 132.0
+focus_mode = 0
+theme = SubResource("Theme_eh0v1")
+text = "settings"
+flat = true
+script = ExtResource("2_kbped")
+
+[node name="Button" type="Button" parent="Button/Button"]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 300.0
+offset_bottom = 132.0
+focus_mode = 0
+theme = SubResource("Theme_eh0v1")
+text = "credits"
+flat = true
+script = ExtResource("3_fj5cn")
+
+[node name="Button" type="Button" parent="Button/Button/Button"]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 300.0
+offset_bottom = 132.0
+focus_mode = 0
+theme = SubResource("Theme_eh0v1")
+text = "quit"
+flat = true
+script = ExtResource("4_iy58a")

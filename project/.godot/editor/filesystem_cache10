@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1751673979
+Arena.tscn::PackedScene::7484760607407242385::1751673964::0::1::::<><><>0<>0<><>::uid://dtkhycaqubt1w::::res://Textures/Brick.png<>uid://tuybh3p4dgif::::res://Textures/Platform.png
+icon.svg::CompressedTexture2D/CompressedTexture2D::4200572104443751297::1751673765::1751673867::1::::<><><>0<>0<>d10e5cae494da2d7c5042d6309f1b079<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://MainMenu/::1751673880
+control.tscn::PackedScene::4112836435664081450::1751673880::0::1::::<><><>0<>0<><>::uid://bj1i57x7jnxbg::::res://MainMenu/start.gd<>uid://dn8xucqfaun4d::::res://MainMenu/MenuTheme.tres<>uid://2u6o8sta74bc::::res://MainMenu/option.gd<>uid://smlxjyypx2xr::::res://MainMenu/credits.gd<>uid://c43xrnxd42mvc::::res://MainMenu/exit.gd
+credits.gd::GDScript/GDScript::1288881189610432435::1751673765::0::1::::<>Button<><>0<>0<><>::
+exit.gd::GDScript/GDScript::6867547977843016132::1751673765::0::1::::<>Button<><>0<>0<><>::
+MenuTheme.tres::Theme/Theme::8141273820960973521::1751673765::0::1::::<><><>0<>0<><>::
+option.gd::GDScript/GDScript::1938295323140097400::1751673765::0::1::::<>Button<><>0<>0<><>::
+start.gd::GDScript/GDScript::3072335125544429628::1751673765::0::1::::<>Button<><>0<>0<><>::
+::res://MainMenu/settings/::1751673880
+settings.tscn::PackedScene::4632940557756899672::1751673880::0::1::::<><><>0<>0<><>::uid://dn8xucqfaun4d::::res://MainMenu/MenuTheme.tres
+::res://Textures/::1751673867
+Brick.png::CompressedTexture2D/CompressedTexture2D::8513961841546054942::1751673765::1751673867::1::::<><><>0<>0<>7676cba9ad06053d28de64e2db0011e9<>res://.godot/imported/Brick.png-2027a02d7781aecf5fc19fb06ebb286c.ctex::
+Platform.png::CompressedTexture2D/CompressedTexture2D::1376334989462495733::1751673765::1751673867::1::::<><><>0<>0<>9053b8e21b9277d589bb081a934054b0<>res://.godot/imported/Platform.png-cd2482bc65f5a8e905f72754048dd1f6.ctex::
