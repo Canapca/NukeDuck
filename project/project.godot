@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NukeyDucky"
-run/main_scene="uid://bu2sp6y0evpsl"
+run/main_scene="uid://djwvt2gdv2ote"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
