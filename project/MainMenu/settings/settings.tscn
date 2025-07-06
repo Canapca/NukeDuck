@@ -1,19 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7ah4bl0qrsmq"]
+[gd_scene load_steps=3 format=3 uid="uid://b7ah4bl0qrsmq"]
 
 [ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="1_3aqj0"]
+[ext_resource type="Script" uid="uid://cf0f0pa0a8vl8" path="res://MainMenu/settings/settings.gd" id="1_whtwj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_whtwj")
 
-[node name="Label" type="Label" parent="."]
+[node name="Button" type="CheckButton" parent="."]
 layout_mode = 0
-offset_left = 253.0
-offset_top = 760.0
-offset_right = 1932.0
-offset_bottom = 841.0
+offset_left = 450.0
+offset_top = 336.0
+offset_right = 855.0
+offset_bottom = 417.0
 theme = ExtResource("1_3aqj0")
-text = "settings go here"
-horizontal_alignment = 1
+text = "windowed"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
