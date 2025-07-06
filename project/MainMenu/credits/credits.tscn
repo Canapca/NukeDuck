@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2bj2r8jd5xow"]
+
+[sub_resource type="FontFile" id="FontFile_gj55q"]
+cache/0/151/0/ascent = 0.0
+cache/0/151/0/descent = 0.0
+cache/0/151/0/underline_position = 0.0
+cache/0/151/0/underline_thickness = 0.0
+cache/0/151/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_mgeyr"]
+font = SubResource("FontFile_gj55q")
+font_size = 151
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 368.0
+offset_right = 1434.0
+offset_bottom = 575.0
+text = "credits go here"
+label_settings = SubResource("LabelSettings_mgeyr")
