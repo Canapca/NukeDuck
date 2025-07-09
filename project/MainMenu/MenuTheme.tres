@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=9 format=3 uid="uid://dn8xucqfaun4d"]
 
-[ext_resource type="FontFile" uid="uid://d3r2nlevfbuj" path="res://BigBlueTerm437NerdFont-Regular.ttf" id="1_51em4"]
+[ext_resource type="FontFile" uid="uid://d3r2nlevfbuj" path="res://MainMenu/BBT.ttf" id="1_51em4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51em4"]
 content_margin_left = 4.0

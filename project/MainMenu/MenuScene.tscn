@@ -1,23 +1,14 @@
 [gd_scene load_steps=23 format=4 uid="uid://djwvt2gdv2ote"]
 
-[ext_resource type="Script" uid="uid://c71irhaivlagy" path="res://MainMenu/menu.gd" id="1_1re7i"]
-[ext_resource type="Script" uid="uid://bj1i57x7jnxbg" path="res://MainMenu/start.gd" id="1_ee4bf"]
-[ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="1_k3u3f"]
-[ext_resource type="Texture2D" uid="uid://dtkhycaqubt1w" path="res://Textures/Brick.png" id="1_qujt1"]
-[ext_resource type="Texture2D" uid="uid://tuybh3p4dgif" path="res://Textures/Platform.png" id="2_1re7i"]
-[ext_resource type="Script" uid="uid://2u6o8sta74bc" path="res://MainMenu/option.gd" id="2_kbped"]
-[ext_resource type="Script" uid="uid://smlxjyypx2xr" path="res://MainMenu/credits.gd" id="3_fj5cn"]
-[ext_resource type="FontFile" uid="uid://d3r2nlevfbuj" path="res://BigBlueTerm437NerdFont-Regular.ttf" id="3_p1t3o"]
-[ext_resource type="Script" uid="uid://c43xrnxd42mvc" path="res://MainMenu/exit.gd" id="4_iy58a"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_0ytqx"]
-font = ExtResource("3_p1t3o")
-font_size = 200
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 10
-shadow_color = Color(0, 0, 0, 0.596078)
-shadow_offset = Vector2(10, 10)
+[ext_resource type="Script" uid="uid://c71irhaivlagy" path="res://MainMenu/ButtonScripts/MainMenuScript.gd" id="1_v4tar"]
+[ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="2_sec58"]
+[ext_resource type="Script" uid="uid://bj1i57x7jnxbg" path="res://MainMenu/ButtonScripts/StartGameScirpt.gd" id="3_df0ns"]
+[ext_resource type="FontFile" uid="uid://d3r2nlevfbuj" path="res://MainMenu/BBT.ttf" id="4_agd37"]
+[ext_resource type="Script" uid="uid://2u6o8sta74bc" path="res://MainMenu/ButtonScripts/OpenSettings.gd" id="5_x4lsy"]
+[ext_resource type="Script" uid="uid://smlxjyypx2xr" path="res://MainMenu/ButtonScripts/OpenCredits.gd" id="6_stml5"]
+[ext_resource type="Script" uid="uid://c43xrnxd42mvc" path="res://MainMenu/ButtonScripts/ExitGame.gd" id="7_3gy5v"]
+[ext_resource type="Texture2D" uid="uid://dtkhycaqubt1w" path="res://EnviormentTextures/Brick.png" id="8_lik1q"]
+[ext_resource type="Texture2D" uid="uid://tuybh3p4dgif" path="res://EnviormentTextures/Platform.png" id="9_jvtgv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yapkh"]
 
@@ -63,12 +54,21 @@ Button/colors/font_color = Color(0.629676, 0.629674, 0.629675, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/colors/font_pressed_color = Color(0.775063, 0.775063, 0.775063, 1)
 Button/constants/outline_size = 10
-Button/fonts/font = ExtResource("3_p1t3o")
+Button/fonts/font = ExtResource("4_agd37")
 Button/styles/focus = SubResource("StyleBoxEmpty_yapkh")
 Button/styles/hover = SubResource("StyleBoxFlat_yapkh")
 Button/styles/normal = SubResource("StyleBoxFlat_k3u3f")
 Button/styles/pressed = SubResource("StyleBoxFlat_uvb6l")
 FlatButton/styles/hover = SubResource("StyleBoxFlat_tdy12")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ytqx"]
+font = ExtResource("4_agd37")
+font_size = 200
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.596078)
+shadow_offset = Vector2(10, 10)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qujt1"]
 
@@ -76,14 +76,14 @@ FlatButton/styles/hover = SubResource("StyleBoxFlat_tdy12")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt1mi"]
 resource_name = "Bricked up"
-texture = ExtResource("1_qujt1")
+texture = ExtResource("8_lik1q")
 texture_region_size = Vector2i(160, 160)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80, -80, 80, -80, 80, 80, -80, 80)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohjtk"]
 resource_name = "Platform"
-texture = ExtResource("2_1re7i")
+texture = ExtResource("9_jvtgv")
 texture_region_size = Vector2i(160, 160)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80, 80, 80, 80, 80, 20, -80, 20)
@@ -102,41 +102,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1re7i")
+script = ExtResource("1_v4tar")
 
 [node name="Node" type="Control" parent="."]
 z_index = 5
 anchors_preset = 0
 
-[node name="Label" type="Label" parent="Node"]
-layout_mode = 0
-offset_top = 75.0
-offset_right = 1920.0
-offset_bottom = 355.0
-theme = ExtResource("1_k3u3f")
-text = "Pipe bombers"
-label_settings = SubResource("LabelSettings_0ytqx")
-horizontal_alignment = 1
-
-[node name="Control" type="Control" parent="Node/Label"]
+[node name="Control" type="Control" parent="Node"]
 anchors_preset = 0
-offset_top = 100.0
+offset_top = 175.0
 offset_right = 40.0
-offset_bottom = 140.0
+offset_bottom = 215.0
 
-[node name="Start Button" type="Button" parent="Node/Label/Control"]
+[node name="Start Button" type="Button" parent="Node/Control"]
 layout_mode = 0
 offset_left = 760.0
 offset_top = 325.0
 offset_right = 1160.0
 offset_bottom = 391.0
 focus_mode = 0
-theme = ExtResource("1_k3u3f")
+theme = ExtResource("2_sec58")
 text = "start game"
 flat = true
-script = ExtResource("1_ee4bf")
+script = ExtResource("3_df0ns")
 
-[node name="Settings button" type="Button" parent="Node/Label/Control"]
+[node name="Settings button" type="Button" parent="Node/Control"]
 layout_mode = 0
 offset_left = 800.0
 offset_top = 391.0
@@ -146,9 +136,9 @@ focus_mode = 0
 theme = SubResource("Theme_eh0v1")
 text = "settings"
 flat = true
-script = ExtResource("2_kbped")
+script = ExtResource("5_x4lsy")
 
-[node name="Credits Button" type="Button" parent="Node/Label/Control"]
+[node name="Credits Button" type="Button" parent="Node/Control"]
 layout_mode = 0
 offset_left = 810.0
 offset_top = 457.0
@@ -158,9 +148,9 @@ focus_mode = 0
 theme = SubResource("Theme_eh0v1")
 text = "credits"
 flat = true
-script = ExtResource("3_fj5cn")
+script = ExtResource("6_stml5")
 
-[node name="Exit Button" type="Button" parent="Node/Label/Control"]
+[node name="Exit Button" type="Button" parent="Node/Control"]
 layout_mode = 0
 offset_left = 810.0
 offset_top = 523.0
@@ -170,7 +160,18 @@ focus_mode = 0
 theme = SubResource("Theme_eh0v1")
 text = "quit"
 flat = true
-script = ExtResource("4_iy58a")
+script = ExtResource("7_3gy5v")
+
+[node name="Label" type="Label" parent="Node"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 75.0
+offset_right = 1760.0
+offset_bottom = 355.0
+theme = ExtResource("2_sec58")
+text = "Pipe bombers"
+label_settings = SubResource("LabelSettings_0ytqx")
+horizontal_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -2

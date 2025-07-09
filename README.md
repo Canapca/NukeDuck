@@ -1,1 +1,5 @@
-we will make sprites music and code sprites: ducks and store and background ground all that music: we will see soon code: self explanatory this game is made for a game jam about ducks and bombs in godot feel free to downlaod
+**Repo for the Nuke a Duck game jam entry**
+**Made by Canapca and Aspiire**
+
+## General gameplay loop:
+Fight off the enemy ducks using different bomb throwing techniques. Avoid taking damage from different ducks, each having a unique way to attack and be attacked. Between waves you get to pick fixes to your base and upgrade your duck.

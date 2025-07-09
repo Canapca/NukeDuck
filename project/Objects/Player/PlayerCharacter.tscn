@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8v8s71gf1xu2"]
+
+[ext_resource type="Texture2D" uid="uid://drd6s0rx4ivpn" path="res://Objects/Player/CharacterSprites/Duck01.png" id="1_1cp65"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1cp65"]
+radius = 98.0
+height = 322.0
+
+[node name="Player Character" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 0)
+shape = SubResource("CapsuleShape2D_1cp65")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1cp65")
