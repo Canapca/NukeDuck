@@ -7,28 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://tuybh3p4dgif" path="res://Textures/Platform.png" id="2_1re7i"]
 [ext_resource type="Script" uid="uid://2u6o8sta74bc" path="res://MainMenu/option.gd" id="2_kbped"]
 [ext_resource type="Script" uid="uid://smlxjyypx2xr" path="res://MainMenu/credits.gd" id="3_fj5cn"]
+[ext_resource type="FontFile" uid="uid://d3r2nlevfbuj" path="res://BigBlueTerm437NerdFont-Regular.ttf" id="3_p1t3o"]
 [ext_resource type="Script" uid="uid://c43xrnxd42mvc" path="res://MainMenu/exit.gd" id="4_iy58a"]
 
-[sub_resource type="FontFile" id="FontFile_sky72"]
-cache/0/64/0/ascent = 0.0
-cache/0/64/0/descent = 0.0
-cache/0/64/0/underline_position = 0.0
-cache/0/64/0/underline_thickness = 0.0
-cache/0/64/0/scale = 1.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/256/0/ascent = 0.0
-cache/0/256/0/descent = 0.0
-cache/0/256/0/underline_position = 0.0
-cache/0/256/0/underline_thickness = 0.0
-cache/0/256/0/scale = 1.0
-
 [sub_resource type="LabelSettings" id="LabelSettings_0ytqx"]
-font = SubResource("FontFile_sky72")
-font_size = 256
+font = ExtResource("3_p1t3o")
+font_size = 200
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 10
@@ -79,6 +63,7 @@ Button/colors/font_color = Color(0.629676, 0.629674, 0.629675, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/colors/font_pressed_color = Color(0.775063, 0.775063, 0.775063, 1)
 Button/constants/outline_size = 10
+Button/fonts/font = ExtResource("3_p1t3o")
 Button/styles/focus = SubResource("StyleBoxEmpty_yapkh")
 Button/styles/hover = SubResource("StyleBoxFlat_yapkh")
 Button/styles/normal = SubResource("StyleBoxFlat_k3u3f")
@@ -136,7 +121,7 @@ horizontal_alignment = 1
 layout_mode = 0
 offset_left = 810.0
 offset_top = 400.0
-offset_right = 1110.0
+offset_right = 1210.0
 offset_bottom = 466.0
 focus_mode = 0
 theme = ExtResource("1_k3u3f")
@@ -147,7 +132,7 @@ script = ExtResource("1_ee4bf")
 [node name="Button" type="Button" parent="Node/Button"]
 layout_mode = 0
 offset_top = 66.0
-offset_right = 300.0
+offset_right = 320.0
 offset_bottom = 132.0
 focus_mode = 0
 theme = SubResource("Theme_eh0v1")
