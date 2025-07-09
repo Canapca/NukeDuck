@@ -110,55 +110,62 @@ anchors_preset = 0
 
 [node name="Label" type="Label" parent="Node"]
 layout_mode = 0
+offset_top = 75.0
 offset_right = 1920.0
-offset_bottom = 280.0
+offset_bottom = 355.0
 theme = ExtResource("1_k3u3f")
 text = "Pipe bombers"
 label_settings = SubResource("LabelSettings_0ytqx")
 horizontal_alignment = 1
 
-[node name="Start Button" type="Button" parent="Node"]
+[node name="Control" type="Control" parent="Node/Label"]
+anchors_preset = 0
+offset_top = 100.0
+offset_right = 40.0
+offset_bottom = 140.0
+
+[node name="Start Button" type="Button" parent="Node/Label/Control"]
 layout_mode = 0
 offset_left = 760.0
-offset_top = 400.0
+offset_top = 325.0
 offset_right = 1160.0
-offset_bottom = 466.0
+offset_bottom = 391.0
 focus_mode = 0
 theme = ExtResource("1_k3u3f")
 text = "start game"
 flat = true
 script = ExtResource("1_ee4bf")
 
-[node name="Settings button" type="Button" parent="Node"]
+[node name="Settings button" type="Button" parent="Node/Label/Control"]
 layout_mode = 0
 offset_left = 800.0
-offset_top = 466.0
+offset_top = 391.0
 offset_right = 1120.0
-offset_bottom = 532.0
+offset_bottom = 457.0
 focus_mode = 0
 theme = SubResource("Theme_eh0v1")
 text = "settings"
 flat = true
 script = ExtResource("2_kbped")
 
-[node name="Credits Button" type="Button" parent="Node"]
+[node name="Credits Button" type="Button" parent="Node/Label/Control"]
 layout_mode = 0
 offset_left = 810.0
-offset_top = 532.0
+offset_top = 457.0
 offset_right = 1110.0
-offset_bottom = 598.0
+offset_bottom = 523.0
 focus_mode = 0
 theme = SubResource("Theme_eh0v1")
 text = "credits"
 flat = true
 script = ExtResource("3_fj5cn")
 
-[node name="Exit Button" type="Button" parent="Node"]
+[node name="Exit Button" type="Button" parent="Node/Label/Control"]
 layout_mode = 0
 offset_left = 810.0
-offset_top = 598.0
+offset_top = 523.0
 offset_right = 1110.0
-offset_bottom = 664.0
+offset_bottom = 589.0
 focus_mode = 0
 theme = SubResource("Theme_eh0v1")
 text = "quit"
