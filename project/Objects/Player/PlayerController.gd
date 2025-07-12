@@ -26,7 +26,7 @@ func MovePlayer():
 		movement.x = movement.x / 1.2
 	if abs(movement.x) < 0.1:
 		movement.x = 0
-	if (! Input.is_action_pressed("Left")) and (! Input.is_action_pressed("Right")):
+	if (! Input.is_action_pressed("Left")) or (! Input.is_action_pressed("Right")):
 		velocity.x = velocity.x / 1.2
 	if abs(velocity.x) < 0.1:
 		velocity.x = 0
