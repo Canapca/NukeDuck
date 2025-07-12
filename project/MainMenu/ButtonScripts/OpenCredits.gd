@@ -1,4 +1,4 @@
 extends Button
 
 func _pressed() -> void:
-	get_tree().change_scene_to_file("res://MainMenu/credits/credits.tscn")
+	get_tree().change_scene_to_file("res://MainMenu/credits/CreditsScene.tscn")

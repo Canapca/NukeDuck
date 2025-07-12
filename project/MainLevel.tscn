@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://devw6cg024gfx"]
+[gd_scene load_steps=8 format=4 uid="uid://devw6cg024gfx"]
 
 [ext_resource type="Texture2D" uid="uid://dtkhycaqubt1w" path="res://EnviormentTextures/Brick.png" id="1_o3cl4"]
 [ext_resource type="Texture2D" uid="uid://tuybh3p4dgif" path="res://EnviormentTextures/Platform.png" id="2_fi62q"]
+[ext_resource type="PackedScene" uid="uid://b8v8s71gf1xu2" path="res://Objects/Player/PlayerCharacter.tscn" id="3_fi62q"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u45fm"]
+rough = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbyki"]
 resource_name = "Bricked up"
@@ -35,3 +37,7 @@ tile_set = SubResource("TileSet_77amt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(960, 540)
+
+[node name="Player Character" parent="." instance=ExtResource("3_fi62q")]
+position = Vector2(451, 356)
+scale = Vector2(0.5, 0.5)

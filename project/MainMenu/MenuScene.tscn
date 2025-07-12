@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dtkhycaqubt1w" path="res://EnviormentTextures/Brick.png" id="8_lik1q"]
 [ext_resource type="Texture2D" uid="uid://tuybh3p4dgif" path="res://EnviormentTextures/Platform.png" id="9_jvtgv"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yapkh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4tar"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yapkh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sec58"]
 bg_color = Color(0, 0, 0, 0.4)
 border_color = Color(0, 0, 0, 0.364706)
 corner_radius_top_left = 50
@@ -20,10 +20,10 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3u3f"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_df0ns"]
 bg_color = Color(0, 0, 0, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvb6l"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agd37"]
 bg_color = Color(0, 0, 0, 0.662745)
 border_color = Color(0.8, 0.8, 0.8, 0)
 corner_radius_top_left = 50
@@ -32,34 +32,34 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_color = Color(0, 0, 0, 0.784314)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdy12"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4lsy"]
 bg_color = Color(1, 0, 1, 1)
 
-[sub_resource type="FontFile" id="FontFile_pxugv"]
-cache/0/60/0/ascent = 0.0
-cache/0/60/0/descent = 0.0
-cache/0/60/0/underline_position = 0.0
-cache/0/60/0/underline_thickness = 0.0
-cache/0/60/0/scale = 1.0
+[sub_resource type="FontFile" id="FontFile_stml5"]
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
 
 [sub_resource type="Theme" id="Theme_eh0v1"]
-default_font = SubResource("FontFile_pxugv")
+default_font = SubResource("FontFile_stml5")
 default_font_size = 60
 Button/colors/font_color = Color(0.629676, 0.629674, 0.629675, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/colors/font_pressed_color = Color(0.775063, 0.775063, 0.775063, 1)
 Button/constants/outline_size = 10
 Button/fonts/font = ExtResource("4_agd37")
-Button/styles/focus = SubResource("StyleBoxEmpty_yapkh")
-Button/styles/hover = SubResource("StyleBoxFlat_yapkh")
-Button/styles/normal = SubResource("StyleBoxFlat_k3u3f")
-Button/styles/pressed = SubResource("StyleBoxFlat_uvb6l")
-FlatButton/styles/hover = SubResource("StyleBoxFlat_tdy12")
+Button/styles/focus = SubResource("StyleBoxEmpty_v4tar")
+Button/styles/hover = SubResource("StyleBoxFlat_sec58")
+Button/styles/normal = SubResource("StyleBoxFlat_df0ns")
+Button/styles/pressed = SubResource("StyleBoxFlat_agd37")
+FlatButton/styles/hover = SubResource("StyleBoxFlat_x4lsy")
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ytqx"]
 font = ExtResource("4_agd37")
@@ -72,16 +72,16 @@ shadow_offset = Vector2(10, 10)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qujt1"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o6n5b"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3gy5v"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt1mi"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lik1q"]
 resource_name = "Bricked up"
 texture = ExtResource("8_lik1q")
 texture_region_size = Vector2i(160, 160)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80, -80, 80, -80, 80, 80, -80, 80)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohjtk"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jvtgv"]
 resource_name = "Platform"
 texture = ExtResource("9_jvtgv")
 texture_region_size = Vector2i(160, 160)
@@ -91,9 +91,9 @@ texture_region_size = Vector2i(160, 160)
 [sub_resource type="TileSet" id="TileSet_mkv6p"]
 tile_size = Vector2i(160, 160)
 physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_o6n5b")
-sources/0 = SubResource("TileSetAtlasSource_bt1mi")
-sources/2 = SubResource("TileSetAtlasSource_ohjtk")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_3gy5v")
+sources/0 = SubResource("TileSetAtlasSource_lik1q")
+sources/2 = SubResource("TileSetAtlasSource_jvtgv")
 
 [node name="Control" type="Control"]
 layout_mode = 3

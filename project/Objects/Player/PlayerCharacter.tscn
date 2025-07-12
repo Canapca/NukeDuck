@@ -1,18 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8v8s71gf1xu2"]
+[gd_scene load_steps=3 format=3 uid="uid://b8v8s71gf1xu2"]
 
 [ext_resource type="Texture2D" uid="uid://drd6s0rx4ivpn" path="res://Objects/Player/CharacterSprites/Duck01.png" id="1_1cp65"]
 [ext_resource type="Script" uid="uid://clry72qxxnrqc" path="res://Objects/Player/PlayerController.gd" id="1_kgdy8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1cp65"]
-radius = 98.0
-height = 322.0
-
 [node name="Player Character" type="CharacterBody2D"]
 script = ExtResource("1_kgdy8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20, 0)
-shape = SubResource("CapsuleShape2D_1cp65")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1cp65")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-20, 160, 60, 160, 95, 95, 115, 75, 115, 65, 15, -30, 15, -86, -25, -126, -65, -126, -85, -94, -85, -66, -95, -5, -95, 35, -35, 105)
