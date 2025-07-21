@@ -14,6 +14,7 @@ polygon = PackedVector2Array(-25, 160, 65, 160, 115, 70, 15, -34, 15, -85, -26, 
 
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
+offset = Vector2(0, -450)
 limit_left = 0
 limit_right = 1920
 position_smoothing_enabled = true

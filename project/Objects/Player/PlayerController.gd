@@ -18,6 +18,8 @@ func GetInput():
 
 func MovePlayer():
 	move_and_collide(movement)
+	
+	# A bunch of speed smoothing operations
 	if (movement.x > speed_max):
 		movement.x = speed_max
 	elif (movement.x < -speed_max):
@@ -32,6 +34,7 @@ func MovePlayer():
 		movement.x = movement.x / 1.2
 	if abs(velocity.x) < 0.1:
 		velocity.x = 0
+	
 	velocity.y += gravity
 	move_and_slide()
 	
