@@ -1,0 +1,28 @@
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://b4v865ltt7yv3"]
+
+[ext_resource type="Texture2D" uid="uid://dtkhycaqubt1w" path="res://EnviormentTextures/Brick.png" id="1_oa84d"]
+[ext_resource type="Texture2D" uid="uid://tuybh3p4dgif" path="res://EnviormentTextures/Platform.png" id="2_jqugf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u45fm"]
+rough = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbyki"]
+resource_name = "Bricked up"
+texture = ExtResource("1_oa84d")
+texture_region_size = Vector2i(160, 160)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80, -80, 80, -80, 80, 80, -80, 80)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uj4qe"]
+resource_name = "Platform"
+texture = ExtResource("2_jqugf")
+texture_region_size = Vector2i(160, 160)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80, 80, 80, 80, 80, 20, -80, 20)
+
+[resource]
+tile_size = Vector2i(160, 160)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_u45fm")
+sources/0 = SubResource("TileSetAtlasSource_vbyki")
+sources/2 = SubResource("TileSetAtlasSource_uj4qe")

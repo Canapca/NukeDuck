@@ -3,8 +3,8 @@ extends CharacterBody2D
 var movement = Vector2(0, 0)
 var speed_acceleration = 2
 var speed_max = 15
-var gravity = 100
-var jump_force = 2000
+var gravity = 120
+var jump_force = 2200
 
 func GetInput():
 	if Input.is_action_pressed("Left"):
@@ -28,12 +28,14 @@ func MovePlayer():
 		movement.x = 0
 	if (! Input.is_action_pressed("Left")) or (! Input.is_action_pressed("Right")):
 		velocity.x = velocity.x / 1.2
+	if Input.is_action_pressed("Left") and Input.is_action_pressed("Right"):
+		movement.x = movement.x / 1.2
 	if abs(velocity.x) < 0.1:
 		velocity.x = 0
 	velocity.y += gravity
 	move_and_slide()
 	
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	GetInput()
 	MovePlayer()

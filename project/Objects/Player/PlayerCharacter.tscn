@@ -10,4 +10,16 @@ script = ExtResource("1_kgdy8")
 texture = ExtResource("1_1cp65")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-20, 160, 60, 160, 95, 95, 115, 75, 115, 65, 15, -30, 15, -86, -25, -126, -65, -126, -85, -94, -85, -66, -95, -5, -95, 35, -35, 105)
+polygon = PackedVector2Array(-25, 160, 65, 160, 115, 70, 15, -34, 15, -85, -26, -125, -66, -125, -95, -5, -95, 36)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+texture_filter = 1
+limit_left = 0
+limit_right = 1920
+position_smoothing_enabled = true
+position_smoothing_speed = 2.5
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.5
+drag_right_margin = 0.0
+drag_bottom_margin = 0.6
