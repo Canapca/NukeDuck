@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://devw6cg024gfx"]
+[gd_scene load_steps=5 format=3 uid="uid://devw6cg024gfx"]
 
 [ext_resource type="Script" uid="uid://83oabaj2mxbu" path="res://main_level.gd" id="1_fi62q"]
 [ext_resource type="PackedScene" uid="uid://d3qxj7l34rp7o" path="res://Objects/Floors/floor_test_base.tscn" id="2_o3cl4"]
 [ext_resource type="PackedScene" uid="uid://b8v8s71gf1xu2" path="res://Objects/Player/PlayerCharacter.tscn" id="3_fi62q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fi62q"]
+size = Vector2(1920, 100)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fi62q")
@@ -12,3 +15,11 @@ position = Vector2(1141, 936)
 scale = Vector2(0.5, 0.5)
 
 [node name="FloorTestBase" parent="." instance=ExtResource("2_o3cl4")]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(960, 1080)
+shape = SubResource("RectangleShape2D_fi62q")
+
+[connection signal="body_entered" from="Area2D" to="Player Character" method="_on_area_2d_body_entered"]

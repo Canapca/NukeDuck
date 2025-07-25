@@ -13,5 +13,12 @@ func place_floors():
 		current_position_height -= 1088
 		current_child.position.y = current_position_height
 
+func raiseBar():
+	if $"Player Character".position.y < $Area2D.position.y - 200:
+		$Area2D.position.y -= 100
+
 func _ready() -> void:
 	place_floors()
+
+func _process(delta: float) -> void:
+	raiseBar()

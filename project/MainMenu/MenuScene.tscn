@@ -169,7 +169,7 @@ offset_top = 75.0
 offset_right = 1760.0
 offset_bottom = 355.0
 theme = ExtResource("2_sec58")
-text = "Pipe bombers"
+text = "Duck Tower"
 label_settings = SubResource("LabelSettings_0ytqx")
 horizontal_alignment = 1
 

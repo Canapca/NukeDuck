@@ -6,6 +6,9 @@ var speed_max = 15
 var gravity = 120
 var jump_force = 2200
 
+func explode():
+	$GPUParticles2D.emitting=true
+
 func GetInput():
 	if Input.is_action_pressed("Left"):
 		movement.x -= speed_acceleration
@@ -15,6 +18,7 @@ func GetInput():
 		pass
 	if Input.is_action_just_pressed("Up") and is_on_floor():
 		velocity.y -= jump_force;
+
 
 func MovePlayer():
 	move_and_collide(movement)
@@ -42,3 +46,13 @@ func MovePlayer():
 func _physics_process(_delta: float) -> void:
 	GetInput()
 	MovePlayer()
+
+# SIGNALS
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body == $".":
+		explode()
+		$Sprite2D.visible = false
+		movement.y = 0
+		velocity.y = 0
+		gravity = 0
