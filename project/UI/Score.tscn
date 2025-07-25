@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://mkk4e3huj2rv"]
+
+[ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="1_lptkm"]
+[ext_resource type="FontFile" uid="uid://d3r2nlevfbuj" path="res://MainMenu/BBT.ttf" id="2_1fbla"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8na5l"]
+font = ExtResource("2_1fbla")
+font_size = 68
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.596078)
+shadow_offset = Vector2(10, 10)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 160.0
+offset_top = 25.0
+offset_right = 1760.0
+offset_bottom = 305.0
+theme = ExtResource("1_lptkm")
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_8na5l")
+horizontal_alignment = 1

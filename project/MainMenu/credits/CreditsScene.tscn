@@ -133,7 +133,7 @@ text = "Made by Coowie/Canapca with help of whos.aspiire
 Used tools:
 Godot Engine
 Aseprite
-
+godot-sfxr plugin by tomeyro
 
 External assets:
 
@@ -143,6 +143,7 @@ horizontal_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -2
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2

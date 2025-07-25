@@ -1,0 +1,146 @@
+[gd_scene load_steps=14 format=3 uid="uid://du54tqvlxapyr"]
+
+[ext_resource type="Theme" uid="uid://dn8xucqfaun4d" path="res://MainMenu/MenuTheme.tres" id="1_oaxie"]
+[ext_resource type="FontFile" uid="uid://d3r2nlevfbuj" path="res://MainMenu/BBT.ttf" id="2_sg0mt"]
+[ext_resource type="Script" uid="uid://bj1i57x7jnxbg" path="res://MainMenu/ButtonScripts/StartGameScirpt.gd" id="3_8na5l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oaxie"]
+font = ExtResource("2_sg0mt")
+font_size = 68
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.596078)
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4tar"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sec58"]
+bg_color = Color(0, 0, 0, 0.4)
+border_color = Color(0, 0, 0, 0.364706)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_df0ns"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agd37"]
+bg_color = Color(0, 0, 0, 0.662745)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4lsy"]
+bg_color = Color(1, 0, 1, 1)
+
+[sub_resource type="FontFile" id="FontFile_stml5"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_rap7m"]
+default_font = SubResource("FontFile_stml5")
+default_font_size = 60
+Button/colors/font_color = Color(0.629676, 0.629674, 0.629675, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.775063, 0.775063, 0.775063, 1)
+Button/constants/outline_size = 10
+Button/fonts/font = ExtResource("2_sg0mt")
+Button/styles/focus = SubResource("StyleBoxEmpty_v4tar")
+Button/styles/hover = SubResource("StyleBoxFlat_sec58")
+Button/styles/normal = SubResource("StyleBoxFlat_df0ns")
+Button/styles/pressed = SubResource("StyleBoxFlat_agd37")
+FlatButton/styles/hover = SubResource("StyleBoxFlat_x4lsy")
+
+[sub_resource type="GDScript" id="GDScript_sg0mt"]
+script/source = "extends Button
+
+func _pressed() -> void:
+	get_tree().change_scene_to_file(\"res://MainMenu/MenuScene.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_vrvxh"]
+script/source = "extends Button
+
+func _pressed() -> void:
+	get_tree().quit()
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 160.0
+offset_top = 25.0
+offset_right = 1760.0
+offset_bottom = 305.0
+theme = ExtResource("1_oaxie")
+text = "YOU DIED
+Score: "
+label_settings = SubResource("LabelSettings_oaxie")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 200.0
+offset_right = 40.0
+offset_bottom = 240.0
+
+[node name="Start Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 325.0
+offset_right = 1160.0
+offset_bottom = 391.0
+focus_mode = 0
+theme = ExtResource("1_oaxie")
+text = "Restart"
+flat = true
+script = ExtResource("3_8na5l")
+
+[node name="Settings button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 391.0
+offset_right = 1120.0
+offset_bottom = 457.0
+focus_mode = 0
+theme = SubResource("Theme_rap7m")
+text = "Menu"
+flat = true
+script = SubResource("GDScript_sg0mt")
+
+[node name="Credits Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 457.0
+offset_right = 1110.0
+offset_bottom = 523.0
+focus_mode = 0
+theme = SubResource("Theme_rap7m")
+text = "Quit"
+flat = true
+script = SubResource("GDScript_vrvxh")
